@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>チートシート</title>
+  <script src="cheat-sheet.js"></script>
+  <link rel="stylesheet" type="text/css" href="cheat-sheet.css">
+</head>
+
+<body>
+  <h1 id="title">チートシート</h1>
+  <p>制作者：泉川 叶多 (1F10190019)</p>
+  <div id="index">
+    <!--spanにすると崩れる-->
+    <h3>HTMLの基本的な要素</h3>
+    <ul>
+      <li><a href="#id1-1">文書の構造を記述する</a></li>
+      <li><a href="#id1-2">テキストを修飾する</a></li>
+      <li><a href="#id1-3">箇条書き</a></li>
+      <li><a href="#id1-4">リンクと画像</a></li>
+    </ul>
+    <h3>HTMLの表とフォーム</h3>
+    <ul>
+      <li><a href="#id2-1">表</a></li>
+      <li><a href="#id2-2">colspan および rowspan</a></li>
+      <li><a href="#id2-3">フォーム</a></li>
+      <li><a href="#id2-4">フォーム : ボタン</a></li>
+      <li><a href="#id2-5">フォーム : コントロール①</a></li>
+      <li><a href="#id2-6">フォーム : コントロール②</a></li>
+      <li><a href="#id2-7">フォーム : テキストエリア</a></li>
+      <li><a href="#id2-8">フォーム : セレクタ</a></li>
+      <li><a href="#id2-9">フォーム : ラベル</a></li>
+      <li><a href="#id2-10">そのほか</a></li>
+      <li><a href="#id2-11">フォームの具体例</a></li>
+    </ul>
+    <h3>CSS</h3>
+    <ul>
+      <li><a href="#id3-1">CSS その1</a></li>
+      <li><a href="#id3-2">CSS その2</a></li>
+    </ul>
+    <h3>JavaScript</h3>
+    <ul>
+      <li><a href="#id4-1">JavaScriptのメゾット</a></li>
+      <li><a href="#id4-2">JavaScriptをHTMLに組み込む</a></li>
+      <li><a href="#id4-3">要素の取り出し</a></li>
+      <li><a href="#id4-4">コンテンツの取得</a></li>
+      <li><a href="#id4-5">タイマー</a></li>
+    </ul>
+    <h3>SQLite</h3>
+    <ul>
+      <li><a href="#id5-1">データの抽出</a></li>
+      <li><a href="#id5-1">テーブルの作成・削除</a></li>
+    </ul>
+  </div>
+
+
+
+  <h1 id="id1-1" class="section">文書の構造を記述する</h1>
+  <ul>
+    <li>
+      <h1>h1 見出し</h1>
+    </li>
+    <li>
+      <h2>h2 見出し</h2>
+    </li>
+    <li>
+      <h3>h3 見出し</h3>
+    </li>
+    <li>
+      <p>p 本文</p>
+    </li>
+  </ul>
+
+
+  <h1 id="id1-2" class="section">テキストを修飾する</h1>
+  <ul>
+    <li><b>b 太文字</b></li>
+    <li><i>i イタリック</i></li>
+    <li><strong>strong strong</strong></li>
+    <li><em>em em要素</em></li>
+  </ul>
+
+
+  <h1 id="id1-3" class="section">箇条書き</h1>
+  <ul>
+    <li>ul 順序のない箇条書き</li>
+    <ul>
+      <li>りんご</li>
+      <li>ばなな</li>
+      <li>みかん</li>
+    </ul>
+
+    <li>ol 順序のある箇条書き</li>
+    <ol>
+      <li>赤羽</li>
+      <li>十条</li>
+      <li>板橋</li>
+      <li>池袋</li>
+    </ol>
+  </ul>
+
+
+  <h1 id="id1-4" class="section">リンクと画像</h1>
+  <p>a href=<a href="http://www.iniad.org">"リンク先"</a>/a</p>
+  <p>img src="場所" alt="説明"</p>
+  <img src="https://iniad-bucket-wp.storage.googleapis.com/digipress/voyageur/title/iniad-logo2.png" alt="INIAD logo">
+
+
+  <h1 id="id2-1" class="section">表</h1>
+  <p>table 表を作成</p>
+  <p>tr 1列作成</p>
+  <table>
+    <tr>
+      <th>th 強調列1</th>
+      <th>th 強調列2</th>
+      <th>th 強調列3</th>
+    </tr>
+    <tr>
+      <td>td 列1</td>
+      <td>50</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>td 列2</td>
+      <td>a</td>
+      <td>b</td>
+    </tr>
+  </table>
+
+
+  <h1 id="id2-2" class="section"> colspan および rowspan</h1>
+  <p>th colspan="n" セルを何列分とするか</p>
+  <p>th rowspan="n" セルを何行分とするか</p>
+  <table>
+    <tr>
+      <th colspan="2">商品分類</th>
+      <th>1個あたりの値段（円）</th>
+      <th>個数（個）</th>
+    </tr>
+    <tr>
+      <td rowspan="2">果物</td>
+      <td>みかん</td>
+      <td>50</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>りんご</td>
+      <td>100</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>野菜</td>
+      <td>トマト</td>
+      <td>100</td>
+      <td>20</td>
+    </tr>
+  </table>
+
+
+  <h1 id="id2-3" class="section">フォーム</h1>
+  <p>form フォームの作成</p>
+  <p>action="送り先のURL / サーバー名" method="post"</p>
+  <form>
+    <p>
+      <label for="name">Name:</label>
+      <input id="name" type="text">
+    </p>
+    <p>
+      <label for="password">Password:</label>
+      <input id="password" type="password">
+    </p>
+    <p>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </p>
+  </form>
+
+
+  <h1 id="id2-4" class="section">フォーム : ボタン</h1>
+  <p>moocs:<a href="html_form_botton.png">ボタン</a></p>
+  <h3>フォーム内のボタン</h3>
+  <form>
+    <button type="button">This is a button.</button>
+  </form>
+
+  <h3>フォーム外のボタン</h3>
+  <button type="button">This is a button.</button>
+
+
+  <h1 id="id2-5" class="section">フォーム : コントロール1</h1>
+  <p>moocs:<a href="html_form_controle.png">コントロール</a></p>
+  <form>
+    <p>
+      <label for="id_name">Name:</label>
+      <input id="id_name" type="text">
+    </p>
+    <p>
+      <label for="id_password">Password:</label>
+      <input id="id_password" type="password">
+    </p>
+    <p>
+      <label for="id_email">Email:</label>
+      <input id="id_email" type="email">
+    </p>
+    <p>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </p>
+  </form>
+
+  <h1 id="id2-6" class="section">フォーム : コントロール2</h1>
+  <p>moocs:<a href="html_form_controle.png">セレクタ</a></p>
+  <form>
+    <p>
+      <label for="id_checkbox1">Option1:</label>
+      <input id="id_checkbox1" type="checkbox" checked="checked">
+    </p>
+    <p>
+      <label for="id_checkbox2">Option2:</label>
+      <input id="id_checkbox2" type="checkbox">
+    </p>
+    <p>
+      <label for="id_radio1">Option1:</label>
+      <input id="id_radio1" name="options" type="radio">
+    </p>
+    <p>
+      <label for="id_radio2">Option2:</label>
+      <input id="id_radio2" name="options" type="radio">
+    </p>
+    <p>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </p>
+  </form>
+
+
+  <h1 id="id2-7" class="section">フォーム : テキストエリア</h1>
+  <p>moocs:<a href="html_form_texterea.png">テキストエリア</a></p>
+  <form>
+    <p>
+      <textarea rows="10" cols="50">Write here.</textarea>
+    </p>
+    <p>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </p>
+  </form>
+
+
+  <h1 id="id2-8" class="section">フォーム : セレクタ</h1>
+  <p>moocs:<a href="html_form_selector.png">セレクタ</a></p>
+  <form>
+    <p>
+      <select>
+        <option value="value1" selected>Option 1</option>
+        <option value="value2">Option 2</option>
+        <option value="value3">Option 3</option>
+      </select>
+    </p>
+    <p>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </p>
+  </form>
+
+
+  <h1 id="id2-9" class="section">フォーム : ラベル</h1>
+  <p>moocs:<a href="html_form_rabel.png">ラベル</a></p>
+  <form>
+    <p>
+      <label for="name">Name:</label>
+      <input id="rabel_name" type="text">
+    </p>
+    <p>
+      <label for="password">Password:</label>
+      <input id="rabel_password" type="password">
+    </p>
+    <p>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </p>
+  </form>
+
+  <h1 id="id2-10" class="section">そのほか</h1>
+  <p>hr 中央線</p>
+  <hr>
+  <p>br <br>改行</p>
+
+
+  <h1 id="id2-11" class="section">フォームの具体例</h1>
+  <form action="http://cs-practice.iniad.org/htmlpost" method="post">
+    <p>
+      <label for="name">Name:</label>
+      <input name="name" type="text">
+    </p>
+    <p>
+      <label id="textarea" class="section2">Message:</label>
+      <textarea name="message" rows="10" cols="50">White your message here.</textarea>
+    </p>
+    <p>
+      <label for="id_radio1">Operating System:</label>
+      <input id="os1" name="os" value="Windows" type="radio">
+      <label for="id_radio1">Windows:</label>
+      <input id="os2" name="os" value="Mac" type="radio">
+      <label for="id_radio1">Mac:</label>
+      <input id="os3" name="os" value="Linux" type="radio">
+      <label for="id_radio1">Linux:</label>
+    </p>
+    <p>
+      <label for="brouser">brouser:</label>
+      <select name="brouser">
+        <option id="select1" name="brouser" value="Chrome" selected>Chrome</option>
+        <option id="select2" name="brouser" value="Edge">Edge</option>
+        <option id="select3" name="brouser" value="Other">Other</option>
+      </select>
+    </p>
+    <p>
+      <label for="Programming_languages">Programming languages:</label>
+      <input name="lang-python" id="id_checkbox3" type="checkbox">
+      <label for="Programming_languages">Python:</label>
+      <input name="lang-html" id="id_checkbox4" type="checkbox">
+      <label for="Programming_languages">HTML:</label>
+      <input name="lang-other" id="id_checkbox5" type="checkbox">
+      <label for="Programming_languages">Other:</label>
+    </p>
+    <p>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </p>
+  </form>
+
+
+  <h1 id="id3-1" class="section">CSS</h1>
+  <p>body{}ですべての子要素に継承される</p>
+  <p id="color">文字の色</p>
+  <p id="background-color">背景色</p>
+  <p id="font-family">フォント</p>
+  <p id="font-size">フォントサイズ</p>
+  <p id="line-height">フォントの長さ(上の空白)</p>
+  <p>px:絶対的な長さ em:フォントサイズを1としたときの相対的な長さ %:em*100</p>
+  <p id="font-style">italic</p>
+  <!--イタリック-->
+  <p id="font-style2">oblique</p>
+  <!--斜体-->
+  <p id="font-weight">bold</p>
+  <p id="text-align">文字寄せ</p>
+  <p id="text-decoration">装飾文字</p>
+  <p id="text-shadow">影</p>
+
+  <h1 id="id3-2" class="section">CSS2</h1>
+  <p class="display">text1</p>
+  <p class="display">text2</p>
+  <p class="display">text3</p>
+  <p>text4</p>
+  <ol class="display2">
+    <li>text1</li>
+    <li>text2</li>
+    <li>text3</li>
+  </ol>
+  <p id="size">縦と横</p>
+  <p id="margin_and_padding">マージンとパディング</p>
+  <p id="border">ボーダー</p>
+  <p id="serector"><strong>子孫</strong>セレクターです。<span><strong>全て</strong>の子要素に対応しています。</span></p>
+  <p id="serector2"><strong>子</strong>セレクターです。<span><strong>直下</strong>の子要素に対応しています。</span></p>
+  <div class="Div">
+    <p>div⇒display: blockとなっている</p>
+  </div>
+  <span class="Div">
+    <p>span⇒display: inlineとなっている</p>
+  </span>
+
+
+  <h1 id="id4-1" class="section">JavaScriptのメゾット</h1>
+  <p><i>str</i>.length 文字列の長さを出力</p>
+  <p><i>str</i>.indexOf(<span class="oblique">対象</span>) 文字列が対象を検索し見つけた場所を返す</p>
+  <p><i>str</i>.startWith(<span class="oblique">対象</span>) 文字列が対象から始まっているかをboolで返す</p>
+  <p><i>str</i>.endWith(<span class="oblique">対象</span>) 文字列が対象から終わっているかをboolで返す</p>
+  <p><i>list</i>.push(<span class="oblique">値</span>) listの最後に値を追加</p>
+  <p><i>list</i>.pop(<span class="oblique">値</span>) listの最後の値を削除し、その値を返す</p>
+  <p><i>list</i>.slice(<span class="oblique">スライス(最大2変数)</span>) listのスライスをする</p>
+
+
+  <h1 id="id4-2" class="section">JavaScriptをHTMLに組み込む</h1>
+  <p>&lt;要素 onclick="<i>function</i>"&gt;コンテンツ&lt;要素&gt;　でJavaScriptの関数を呼び出す</p>
+  <p>サンプル</p>
+  <h3>Sample 2-1 : onclick属性でJavaScriptを呼び出す</h3>
+  <p>以下のボタンをクリックすると、アラートダイアログが表示されます。</p>
+  <button onclick="showDialog()">Show Dialog</button>
+
+  <h3>Sample 2-2 : HTMLを書き換える</h3>
+  <p>以下のボタンをクリックすると、コンテンツが書き換わります。</p>
+  <button onclick="countClick()">Count</button>
+  <p class="result"><span id="count"></span>回クリックされました。</p>
+
+
+  <h1 id="id4-3" class="section">要素の取り出し</h1>
+  <p>Documents\cs_1\23を参照</p>
+  <p>moocs:<a href="js_dom_1.png">IDで指定された要素を取り出す</a></p>
+  <p>moocs:<a href="js_dom_2.png">タグ名で指定された要素を取り出す</a></p>
+  <p>moocs:<a href="js_dom_3.png">クラス名で指定された要素を取り出す</a></p>
+  <p>moocs:<a href="js_dom_4.png">４</a></p>
+  <p>moocs:<a href="js_dom_5.png">５</a></p>
+
+
+  <h1 id="id4-4" class="section">コンテンツの取得</h1>
+  <p>moocs:<a href="js_dom_6.png">要素のコンテンツの取得</a></p>
+  <p>moocs:<a href="js_dom_7.png">要素の属性、クラスの取得</a></p>
+  <p>moocs:<a href="js_dom_8.png">フォームの値を取得する</a></p>
+  <div id="sample-2-3" class="sample-content">
+    <h3 class="sample-title">Sample 2-3 : フォームの値を取得する</h3>
+    <form>
+      <p>
+        <label for="textbox">テキストボックス</label>
+        <input id="textbox" type="text">
+      </p>
+      <p>
+        <label for="checkbox">チェックボックス</label>
+        <input id="checkbox" type="checkbox">
+      </p>
+    </form>
+
+    <button onclick="sample2_3_1()">Element.value</button>
+    <button onclick="sample2_3_2()">Element.checked</button>
+    <button onclick="sample2_3_3()">Element.disabled</button>
+  </div>
+  <p>moocs:<a href="js_dom_9.png">要素のコンテンツの変更</a></p>
+  <div id="sample-2-4" class="sample-content">
+    <h3 class="sample-title">Sample 2-4 : 要素のコンテンツの変更</h3>
+    <div id="content">
+    </div>
+    <p>
+      <textarea id="textarea2" rows="10" cols="50">&lt;p&gt;&lt;b&gt;Hello&lt;/b&gt;&lt;/p&gt;</textarea>
+    </p>
+    <button onclick="sample2_4_1()">Element.innerHTML</button>
+    <button onclick="sample2_4_2()">Element.textContent</button>
+  </div>
+  <p>moocs:<a href="js_dom_10.png">要素の属性とクラスの変更</a></p>
+  <p>moocs:<a href="js_dom_11.png">フォームの状態の変更</a></p>
+  <div id="sample-2-6" class="sample-content">
+    <h3 class="sample-title">Sample 2-6 : フォームの状態の変更</h3>
+    <form>
+      <p>
+        <label for="textbox2">テキストボックス</label>
+        <input id="textbox2" type="text">
+      </p>
+      <p>
+        <label for="checkbox2">チェックボックス</label>
+        <input id="checkbox2" type="checkbox">
+      </p>
+    </form>
+
+    <button onclick="sample2_6_1()">Element.value = 'Hello'</button>
+    <button onclick="sample2_6_2()">Element.checked = true</button>
+    <button onclick="sample2_6_3()">Element.disabled = true</button>
+  </div>
+
+
+  <h1 id="id4-5" class="section">タイマー</h1>
+  <p>moocs:<a href="js_dom_12.png">一定時間後に処理を行う</a></p>
+  <p>moocs:<a href="js_dom_13.png">一定時間後に処理を行う2</a></p>
+  <h3>Sample 4-1 : setTimeoutを使う</h3>
+  <p>Startボタンを押すと、5秒後にアラートダイアログが表示されます。<br>Stopボタンでキャンセルされます。</p>
+  <button onclick="startTimeout()">Start</button>
+  <button onclick="stopTimeout()">Stop</button>
+  <p>moocs:<a href="js_dom_14.png">定期的に実行する</a></p>
+  <p>moocs:<a href="js_dom_15.png">定期的に実行する2</a></p>
+  <h3>Sample 4-2 : setIntervalを使う</h3>
+  <p>Startボタンを押すと、1秒間隔でコンテンツが書き換わります。<br>Stopボタンでキャンセルされます。</p>
+  <button onclick="startInterval()">Start</button>
+  <button onclick="stopInterval()">Stop</button>
+  <p class="result"><span id="count2">0</span>秒経過</p>
+
+
+  <h1 id="id5-1" class="section">データの抽出</h1>
+  <p>select 列1, 列2, ... from テーブル名 where 条件 limit (N番目), M番目 </p>
+  <h3>例</h3>
+  <p>select * from students where pref='東京都';</p>
+  <p>select id, zip, pref from students where not id between 10010 and 10019 and pref like '%県';</p>
+  <p>select id, tel from students where tel is not null and id &lt; 10010;</p>
+  <p>select * from students limit 3;</p>
+  <p>select * from students where class_id=3 limit 2, 4;</p>
+  <p>select id, family_name, given_name, pref from students where tel=090 limit 2;</p>
+  <p>select id, family_name, given_name, pref from students where id between 10030 and 10039 and (pref="千葉県" or pref="茨城県" or pref="群馬県");</p>
+
+
+  <h1 id="id5-2" class="section">関係データベースとSQL</h1>
+  <h3>テーブルの作成・削除</h3>
+  <p>create table running_club(<br>id integer primary key autoincrement,<br>student_id integer not null unique,<br>team text,<br>foreign key(student_id) references students(id));</p>
+  <p>drop table running_club;</p>
+  <h3>データの登録・変更・削除</h3>
+  <p>insert into running_club values(1, 10001, '短距離');</p>
+  <p>insert into running_club values(2, 10003, '長距離');</p>
+  <p>insert into running_club(student_id, team) values(10005, '短距離');</p>
+  <p>update running_club set team='長距離' where id=1;</p>
+  <p>delete from running_club where student_id=10005;</p>
+</body>
+
+</html>

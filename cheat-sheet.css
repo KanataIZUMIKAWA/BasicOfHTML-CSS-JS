@@ -1,0 +1,118 @@
+body{
+    background-color: #fcf9ec;
+}
+
+.section{
+    background-color: #b0f4e6;
+    border-bottom: 5px solid #67eaca;
+    margin: 10px 0px 10px 0px;
+    padding: 5px 0px 0px 5px
+}
+
+#index{
+    border: 3px solid #00ddff;
+    background-color: #e2fff9;
+    margin-left: 5px ;
+    padding-left: 5px;
+}
+
+form{
+    border: 3px solid #00ddff;
+    background-color: #e2fff9;
+    margin-left: 5px ;
+    padding-left: 5px;
+}
+
+#index li{
+    margin-right: 8px; 
+}
+
+#title {
+    background-color: #67eaca;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 5px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.oblique{
+    font-style :oblique;
+    font-family:Times New Roman,"ＭＳ Ｐゴシック";
+}
+
+/*css*/
+#color {
+    color: #00ddff;
+}
+
+#background-color {
+    background-color: #00ddff;
+}
+
+#font-family {
+    font-family: serif;
+}
+
+#font-size {
+    font-size: 20px;
+}
+
+#line-height {
+    line-height: 10px;
+}
+
+#font-style {
+    font-style: italic;
+}
+
+#font-style2 {
+    font-style: oblique;
+}
+
+#font-weight {
+    font-weight: bold;
+}
+
+#text-align {
+    text-align: center;
+}
+
+#text-decoration {
+    text-decoration: #aaaaaa underline;
+    /* or overline or line-through */
+}
+
+#text-shadow {
+    text-shadow: #aaaaaa 3px 3px 1px;
+}
+
+.display {
+    display: inline;
+}
+
+#index li {
+    display: inline-block;
+}
+
+#size {
+    background-color: #00ddff;
+    width: 300px;
+    height: 100px;
+}
+#margin_and_padding{
+    background-color: #ddddff;
+    margin: 20px 10px 0px 20px;
+    padding: 20px 0px 0px 30px;
+}
+#border{
+    border-bottom: 3px solid #00ddff
+}
+#serector strong{
+    background: #00ddff
+}
+#serector2 > strong{
+    background: #00ddff
+}
+.Div{
+    background-color: #00ddff
+}
